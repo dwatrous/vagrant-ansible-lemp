@@ -9,7 +9,7 @@ WEB_IP                  = '192.168.51.4'
 DATABASE_IP             = '192.168.52.4'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-
+  
   # define ansible web box
   config.vm.define "web" do |web|
     web.vm.box = "ubuntu/trusty64"
@@ -61,6 +61,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       file.destination = PRIVATE_KEY_DESTINATION
     end
     control.vm.provision :shell, path: "control.sh"
+    control.vm.synced_folder ".", "/vagrant", :mount_options => ["dmode=755,fmode=644"]
   end
   
   # *consider using agent forwarding instead of manually copying the private key as I did above
