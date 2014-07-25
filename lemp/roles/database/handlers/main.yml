@@ -1,0 +1,5 @@
+---
+# Handler for DB notifications
+
+- name: restart mysql
+  service: name=mysql state=restarted

@@ -1,0 +1,19 @@
+---
+- apt: update_cache=yes
+  environment: proxy_env
+
+# Install the package "mysql"
+- apt: name={{item}} state=present
+  with_items:
+   - nginx
+   - php5-fpm
+   - php5-mysql
+  environment: proxy_env
+
+- name: Create nginx configuration file
+  template: src=default dest=/etc/nginx/sites-available/default
+  notify: 
+  - restart nginx
+
+- name: nginx service state
+  service: name=nginx state=started enabled=yes
