@@ -25,3 +25,7 @@ Depending on your environment, you may need to uncomment the proxy declarations 
 control.sh
 lemp/group_vars/all
 ```
+
+You should be able to view the wall web page
+
+http://127.0.0.1:8080/wall.php

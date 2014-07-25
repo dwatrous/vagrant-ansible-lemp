@@ -15,5 +15,8 @@
   notify: 
   - restart nginx
 
+- name: Add wall.php script that demonstrates php and mysql functionality
+  template: src=wall.php dest=/usr/share/nginx/html/wall.php
+
 - name: nginx service state
   service: name=nginx state=started enabled=yes
