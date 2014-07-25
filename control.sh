@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # set proxy variables
-export http_proxy=http://proxy.example.com:8080
-export https_proxy=https://proxy.example.com:8080
+#export http_proxy=http://proxy.example.com:8080
+#export https_proxy=https://proxy.example.com:8080
 
 # bootstarp ansible for convenience on the control box
 apt-get -y install git python-dev python-pip

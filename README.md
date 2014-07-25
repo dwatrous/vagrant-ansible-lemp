@@ -18,3 +18,10 @@ That will take several minutes but it will result in three new servers running i
 cd /vagrant/lemp
 ansible-playbook -i hosts site.yaml
 ```
+
+Depending on your environment, you may need to uncomment the proxy declarations and identify your proxy environment in the files
+
+```
+control.sh
+lemp/group_vars/all
+```
