@@ -31,7 +31,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # define ansible database box
   config.vm.define "database" do |database|
     database.vm.box = "ubuntu/trusty64"
-    database.vm.network "public_network"
     database.vm.network "private_network", ip: DATABASE_IP
     database.vm.provider "virtualbox" do |v|
       v.name = "Ansible database"
@@ -48,7 +47,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # define ansible control box (provision this last so it can add other hosts to known_hosts for ssh authentication*)
   config.vm.define "control" do |control|
     control.vm.box = "ubuntu/trusty64"
-    control.vm.network "public_network"
     control.vm.network "private_network", ip: "192.168.50.4"
     control.vm.provider "virtualbox" do |v|
       v.name = "Ansible control"
