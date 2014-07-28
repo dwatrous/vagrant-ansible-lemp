@@ -16,7 +16,7 @@ That will take several minutes but it will result in three new servers running i
 
 ```
 cd /vagrant/lemp
-ansible-playbook -i hosts site.yaml
+ansible-playbook -i hosts site.yml
 ```
 
 Depending on your environment, you may need to uncomment the proxy declarations and identify your proxy environment in the files
@@ -29,3 +29,4 @@ lemp/group_vars/all
 You should be able to view the wall web page
 
 http://127.0.0.1:8080/wall.php
+or http://[external_ip]/wall.php
