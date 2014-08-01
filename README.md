@@ -1,6 +1,9 @@
 vagrant-ansible-lemp
 ====================
 
+You can view additional details and a detailed write up for this project here:
+http://software.danielwatrous.com/build-a-multi-server-lemp-stack-using-ansible/
+
 In this project I use Vagrant and VirtualBox on Windows to create three Ubuntu Linux servers to explore ansible. I then use an Ansible playbook to install a Multi-server LEMP stack with an external and internal network
 
 To run this, first prepare your system to use Vagrant based on these instructions:
