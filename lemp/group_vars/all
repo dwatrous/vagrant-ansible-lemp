@@ -1,5 +1,7 @@
 ---
-#proxy_env:
+proxy_env:
+  # put a dummy variable in here when proxy not needed
+  stack: lemp
 #  http_proxy: http://proxy.example.com:8080
 #  https_proxy: https://proxy.example.com:8080
 
